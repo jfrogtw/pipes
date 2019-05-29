@@ -1,9 +1,9 @@
 resources:
   - name: app
     type: gitRepo
-    repoPath: manishas/app
+    repoPath: ranjithrs/app
     configuration:
-      integrationName: manishas_github
+      integrationName: ranjithrs_github
       branches:
         only: master
     version:
