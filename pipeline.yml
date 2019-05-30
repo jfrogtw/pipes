@@ -19,17 +19,17 @@ resources:
   - name: inputBuild
     type: buildInfo
     version:
-      buildName: native_pipeline
+      buildName: demo_pipeline
       buildNumber: 1
 
   - name: promotedBuild
     type: buildInfo
     version:
-      buildName: native_pipeline
+      buildName: demo_pipeline
       buildNumber: 1
 
 pipelines:
-  - name: native_pipeline
+  - name: demo_pipeline
     steps:
       - name: dockerBuild
         type: build
