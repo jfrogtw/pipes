@@ -1,5 +1,5 @@
 resources:
-  - name: app
+  - name: src
     type: gitRepo
     repoPath: ranjithrs/app
     configuration:
@@ -9,7 +9,7 @@ resources:
     version:
       sha: master
 
-  - name: npmSource
+  - name: npmSrc
     type: file
     configuration:
       integrationName: art
@@ -47,8 +47,8 @@ pipelines:
             - art
             - notifySlack
           resources:
-            - app
-            - npmSource
+            - src
+            - npmSrc
         execution:
           onSuccess:
             - send_notification notifySlack --text "built docker image 34.66.110.173:8081/docker-local/demo:$PIPELINE_NAME.$RUN_NUMBER"
