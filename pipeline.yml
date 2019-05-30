@@ -1,7 +1,7 @@
 resources:
   - name: src
     type: gitRepo
-    repoPath: ranjithrs/app
+    repoPath: manishas/app
     configuration:
       integrationName: ranjithr_github
       branches:
