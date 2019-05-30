@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     repoPath: ranjithrs/app
     configuration:
-      integrationName: ranjithrs_github
+      integrationName: ranjithr_github
       branches:
         only: master
     version:
@@ -16,13 +16,13 @@ resources:
     version:
       pattern: "npm-dev-local/"
 
-  - name: bldInfo
+  - name: inputBuild
     type: buildInfo
     version:
       buildName: native_pipeline
       buildNumber: 1
 
-  - name: promotedBld
+  - name: promotedBuild
     type: buildInfo
     version:
       buildName: native_pipeline
@@ -107,6 +107,8 @@ pipelines:
           integrations:
             - art
             - notifySlack
+          steps:
+            - publishBldInfo
         triggeredBy:
           resources:
             - bldInfo
